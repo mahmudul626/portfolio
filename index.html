@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Mahmudul</title>
+  <link rel="icon" href="WhatsApp Image 2025-04-24 at 9.40.09 PM.jpeg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -64,8 +65,6 @@
 </head>
 
 <body class="bg-gray-900 text-white font-sans">
-  <!-- Dark Mode Toggle -->
-  <button onclick="toggleDarkMode()" class="fixed top-4 right-4 z-50 bg-gray-800 text-white px-3 py-1 rounded-full shadow">🌗 Toggle Mode</button>
 
   <!-- Navbar -->
   <nav class="sticky top-0 z-50 bg-gray-950 border-b border-gray-800 shadow">
@@ -130,43 +129,104 @@
 Currently exploring low-level systems, intelligent machines, and problem-solving through code. Always learning, always building.</p>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="bg-gray-800 px-6 py-16" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
-          <h3 class="text-xl font-bold mb-2">Smart Power Control</h3>
-          <p class="text-gray-300 text-sm">An Arduino-based power management system.</p>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
-          <h3 class="text-xl font-bold mb-2">Line Follower Robot</h3>
-          <p class="text-gray-300 text-sm">Robot that follows a predefined path using sensors.</p>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
-          <h3 class="text-xl font-bold mb-2">Weather Monitor</h3>
-          <p class="text-gray-300 text-sm">IoT device to display real-time temperature & humidity.</p>
+  <!-- Projects Section -->
+<section id="projects" class="bg-gray-800 px-6 py-16" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-white">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <!-- Project 1 -->
+      <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-2 text-white">Smart Power Control</h3>
+        <p class="text-gray-300 text-sm mb-4">An Arduino-based power management system.</p>
+        <div class="relative group">
+          <a href="demo.html">
+            <img id="project1Image" src="image1.jpg" class="w-full h-40 object-cover rounded cursor-pointer transition duration-300" />
+          </a>
+          <button onclick="prevSlide('project1')" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-l opacity-0 group-hover:opacity-100">&#9664;</button>
+          <button onclick="nextSlide('project1')" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-r opacity-0 group-hover:opacity-100">&#9654;</button>
         </div>
       </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-2 text-white">Line Follower Robot</h3>
+        <p class="text-gray-300 text-sm mb-4">Robot that follows a predefined path using sensors.</p>
+        <div class="relative group">
+          <a href="demo.html">
+            <img id="project2Image" src="image2.jpg" class="w-full h-40 object-cover rounded cursor-pointer transition duration-300" />
+          </a>
+          <button onclick="prevSlide('project2')" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-l opacity-0 group-hover:opacity-100">&#9664;</button>
+          <button onclick="nextSlide('project2')" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-r opacity-0 group-hover:opacity-100">&#9654;</button>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-2 text-white">Weather Monitor</h3>
+        <p class="text-gray-300 text-sm mb-4">IoT device to display real-time temperature & humidity.</p>
+        <div class="relative group">
+          <a href="demo.html">
+            <img id="project3Image" src="image3.jpg" class="w-full h-40 object-cover rounded cursor-pointer transition duration-300" />
+          </a>
+          <button onclick="prevSlide('project3')" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-l opacity-0 group-hover:opacity-100">&#9664;</button>
+          <button onclick="nextSlide('project3')" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-r opacity-0 group-hover:opacity-100">&#9654;</button>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Slider Script -->
+<script>
+  const projectSlides = {
+    project1: {
+      images: ["image1.jpg", "image2.jpg", "image3.jpg"],
+      index: 0
+    },
+    project2: {
+      images: ["image1.jpg", "image2.jpg", "image3.jpg"],
+      index: 0
+    },
+    project3: {
+      images: ["image1.jpg", "image2.jpg", "image3.jpg"],
+      index: 0
+    }
+  };
+
+  function nextSlide(projectId) {
+    const slide = projectSlides[projectId];
+    slide.index = (slide.index + 1) % slide.images.length;
+    document.getElementById(projectId + "Image").src = slide.images[slide.index];
+  }
+
+  function prevSlide(projectId) {
+    const slide = projectSlides[projectId];
+    slide.index = (slide.index - 1 + slide.images.length) % slide.images.length;
+    document.getElementById(projectId + "Image").src = slide.images[slide.index];
+  }
+</script>
+
+
 
   <!-- Blog Section -->
-  <section id="blog" class="px-6 py-16" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Blog & Articles</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-700 p-6 rounded-lg">
-          <h3 class="text-xl font-bold mb-2">Learning Linux for Robotics</h3>
-          <p class="text-gray-300 text-sm">Beginner tips on using Linux in embedded robotics.</p>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-lg">
-          <h3 class="text-xl font-bold mb-2">My First Arduino Project</h3>
-          <p class="text-gray-300 text-sm">A beginner journey from idea to prototype.</p>
-        </div>
-      </div>
+<section id="blog" class="px-6 py-16" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Blog & Articles</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-2">Learning Linux for Robotics</h3>
+        <p class="text-gray-300 text-sm">Beginner tips on using Linux in embedded robotics.</p>
+      </a>
+      <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-2">My First Arduino Project</h3>
+        <p class="text-gray-300 text-sm">A beginner journey from idea to prototype.</p>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Education Timeline -->
   <section id="education" class="px-6 py-16 bg-gray-800" data-aos="fade-right">
@@ -236,7 +296,7 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
     </div>
     <!-- Skill 4 -->
     <div class="text-center">
-      <h3 class="text-lg font-bold mb-3">Embedded Systems</h3>
+      <h3 class="text-lg font-bold mb-3">ROS2</h3>
       <div class="flex justify-center items-center mb-4">
         <svg class="progress-circle" width="80" height="80" viewBox="0 0 36 36">
           <path class="bg" d="M18 2.0845
@@ -301,8 +361,9 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
     // Typed.js initialization
     var typed = new Typed("#typed", {
       strings: ["Robotics Enthusiast 🤖",
+        "ROS2 Developer 🔧",
         "C Programmer 💻",
-        "Embedded System Developer 🔌",
+        "Embedded System Designer 🔌",
         "WICE 2025 Bangladesh National Round Winner 🌍"],
       typeSpeed: 50,
       backSpeed: 30,
@@ -338,14 +399,6 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
         progressPath.style.strokeDasharray = `${percent}, ${dashArrayMax}`;
       }, 100);
     });
-
-    // Dark mode toggle
-    function toggleDarkMode() {
-      document.body.classList.toggle('bg-gray-900');
-      document.body.classList.toggle('bg-white');
-      document.body.classList.toggle('text-white');
-      document.body.classList.toggle('text-black');
-    }
   </script>
 </body>
 
