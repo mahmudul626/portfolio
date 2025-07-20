@@ -335,7 +335,7 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
     <div class="max-w-lg mx-auto grid grid-cols-2 gap-x-12 gap-y-4 text-sm text-gray-300">
       <!-- Left Column (4 items) -->
       <div class="space-y-2">
-        <p><a href="mailto:mdmahmudulhasan1511@gmail.com" target="_blank" class="inline-flex items-center hover:text-green-300"><i class="fas fa-envelope text-green-400 mr-2"></i> mdmahmudulhasan1511@gmail.com</a></p>
+        <p><a href="mailto:mdmahmudulhasan1511@gmail.com" target="_blank" class="inline-flex items-center hover:text-green-300"><i class="fas fa-envelope text-green-400 mr-2"></i> mdmahmudul<br>hasan1511@gmail.com</a></p>
         <p><a href="tel:+8801301157826" class="inline-flex items-center hover:text-green-300"><i class="fas fa-phone text-green-400 mr-2"></i> +880 1301157826</a></p>
         <p><a href="https://wa.me/8801301157826" target="_blank" class="inline-flex items-center hover:text-green-300"><i class="fab fa-whatsapp text-green-400 mr-2"></i> +880 1301157826</a></p>
         <p><a href="https://www.google.com/maps/place/%E0%A6%A2%E0%A6%BE%E0%A6%95%E0%A6%BE/@23.780753,90.2548746,11z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.804093!4d90.4152376!16zL20vMGZuYjQ?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex items-center hover:text-green-300"><i class="fas fa-home text-green-400 mr-2"></i> Dhaka, Bangladesh</a></p>
@@ -400,6 +400,93 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
       }, 100);
     });
   </script>
+  <!-- Chatbot Container -->
+<div id="chatbot" class="fixed bottom-6 right-6 z-50 flex items-end space-x-2">
+
+  <!-- Ask me message -->
+  <div id="askMsg"
+    class="bg-green-600 text-white px-4 py-2 rounded-full text-sm animate-fade-bounce shadow-lg">
+    Ask me a question
+  </div>
+
+  <!-- Floating Icon -->
+  <button id="chatbotBtn"
+    class="bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg flex items-center justify-center transition duration-300">
+    <img src="chatbot.png" alt="Chatbot" class="w-6 h-6" />
+  </button>
+</div>
+
+<!-- Chat Window -->
+<div id="chatBox"
+  class="hidden fixed bottom-20 right-6 w-80 backdrop-blur-sm bg-[#1e293b]/90 border border-green-400 rounded-xl shadow-xl overflow-hidden z-40">
+
+  <!-- Header -->
+  <div class="bg-green-600 text-white px-4 py-2 font-semibold text-center">
+    🤖 Ask Mahmudul's Chatbot
+  </div>
+
+  <!-- Suggestion Questions -->
+  <div class="px-4 py-3 space-y-2">
+    <button
+      class="bg-[#334155] hover:bg-[#475569] text-sm px-4 py-2 rounded-md w-full text-left question-btn text-white transition duration-200">What
+      is your name?</button>
+    <button
+      class="bg-[#334155] hover:bg-[#475569] text-sm px-4 py-2 rounded-md w-full text-left question-btn text-white transition duration-200">Tell
+      me about this portfolio.</button>
+    <button
+      class="bg-[#334155] hover:bg-[#475569] text-sm px-4 py-2 rounded-md w-full text-left question-btn text-white transition duration-200">Where
+      can I find the projects?</button>
+    <button
+      class="bg-[#334155] hover:bg-[#475569] text-sm px-4 py-2 rounded-md w-full text-left question-btn text-white transition duration-200">How
+      to contact Mahmudul?</button>
+  </div>
+
+  <!-- Chat Messages -->
+  <div id="chatMessages"
+    class="h-48 px-4 py-2 overflow-y-auto text-sm space-y-2 border-t border-green-600">
+    <div class="text-gray-300">Hi! Select a question above 👆</div>
+  </div>
+</div>
+
+<!-- Chatbot Script -->
+<script>
+  const chatbotBtn = document.getElementById("chatbotBtn");
+  const chatBox = document.getElementById("chatBox");
+  const askMsg = document.getElementById("askMsg");
+  const chatMessages = document.getElementById("chatMessages");
+
+  window.addEventListener('load', () => {
+    setTimeout(() => askMsg.style.display = 'none', 5000);
+  });
+
+  chatbotBtn.addEventListener("click", () => {
+    chatBox.classList.toggle("hidden");
+  });
+
+  const questionBtns = document.querySelectorAll(".question-btn");
+
+  questionBtns.forEach(button => {
+    button.addEventListener("click", () => {
+      const userText = button.textContent;
+      chatMessages.innerHTML += `<div class="text-right text-green-400">You: ${userText}</div>`;
+
+      let response = "Sorry, I don't understand.";
+      if (userText.includes("name")) {
+        response = "I’m Mahmudul’s Chatbot. Nice to meet you!";
+      } else if (userText.includes("portfolio")) {
+        response = "This portfolio shows Mahmudul's skills, passion, and projects.";
+      } else if (userText.includes("projects")) {
+        response = "Scroll to the Projects section to explore his work.";
+      } else if (userText.includes("contact")) {
+        response = "Check the Contact section or reach out via the contact form.";
+      }
+
+      chatMessages.innerHTML += `<div class="text-left text-gray-300">Bot: ${response}</div>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    });
+  });
+</script>
+
 </body>
 
 </html>
