@@ -135,84 +135,296 @@
 Currently exploring low-level systems, intelligent machines, and problem-solving through code. Always learning, always building.</p>
   </section>
 
-  <!-- Projects Section -->
-<section id="projects" class="bg-gray-800 px-6 py-16" data-aos="fade-up">
+<!-- Projects Section -->
+<section id="projects" class="bg-gray-800 px-6 py-16 overflow-hidden" data-aos="fade-up">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-3xl font-semibold mb-6 text-center text-white">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      
-      <!-- Project 1 -->
-      <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
+
+    <!-- Slider Container -->
+    <div id="projectSlider"
+         class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth touch-pan-x"
+         onmousedown="startDrag(event)" onmouseup="endDrag(event)" onmousemove="drag(event)"
+         ontouchstart="startDrag(event)" ontouchend="endDrag(event)" ontouchmove="drag(event)">
+
+      <!-- Project Cards (6 Example Projects) -->
+      <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
         <h3 class="text-xl font-bold mb-2 text-white">Smart Power Control</h3>
-        <p class="text-gray-300 text-sm mb-4">An Arduino-based power management system.</p>
-        <div class="relative group">
+        <p class="text-gray-300 text-sm mb-4">Arduino-based power management system.</p>
+        <div class="image-slider relative w-full h-40 rounded overflow-hidden">
           <a href="demo.html">
-            <img id="project1Image" src="image1.jpg" class="w-full h-40 object-cover rounded cursor-pointer transition duration-300" />
+          <div class="slides">
+            <img src="image1.jpg" />
+            <img src="image2.jpg" />
+            <img src="image3.jpg" />
+          </div>
           </a>
-          <button onclick="prevSlide('project1')" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-l opacity-0 group-hover:opacity-100">&#9664;</button>
-          <button onclick="nextSlide('project1')" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-r opacity-0 group-hover:opacity-100">&#9654;</button>
+          <button class="arrow left-arrow">&#10094;</button>
+          <button class="arrow right-arrow">&#10095;</button>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
+      <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
         <h3 class="text-xl font-bold mb-2 text-white">Line Follower Robot</h3>
-        <p class="text-gray-300 text-sm mb-4">Robot that follows a predefined path using sensors.</p>
-        <div class="relative group">
+        <p class="text-gray-300 text-sm mb-4">Follows path using IR sensors & motor driver.</p>
+        <div class="image-slider relative w-full h-40 rounded overflow-hidden">
           <a href="demo.html">
-            <img id="project2Image" src="image2.jpg" class="w-full h-40 object-cover rounded cursor-pointer transition duration-300" />
+          <div class="slides">
+            <img src="image1.jpg" />
+            <img src="image2.jpg" />
+            <img src="image3.jpg" />
+          </div>
           </a>
-          <button onclick="prevSlide('project2')" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-l opacity-0 group-hover:opacity-100">&#9664;</button>
-          <button onclick="nextSlide('project2')" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-r opacity-0 group-hover:opacity-100">&#9654;</button>
+          <button class="arrow left-arrow">&#10094;</button>
+          <button class="arrow right-arrow">&#10095;</button>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition">
+      <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
         <h3 class="text-xl font-bold mb-2 text-white">Weather Monitor</h3>
-        <p class="text-gray-300 text-sm mb-4">IoT device to display real-time temperature & humidity.</p>
-        <div class="relative group">
+        <p class="text-gray-300 text-sm mb-4">Real-time temperature & humidity IoT device.</p>
+        <div class="image-slider relative w-full h-40 rounded overflow-hidden">
           <a href="demo.html">
-            <img id="project3Image" src="image3.jpg" class="w-full h-40 object-cover rounded cursor-pointer transition duration-300" />
+          <div class="slides">
+            <img src="image1.jpg" />
+            <img src="image2.jpg" />
+            <img src="image3.jpg" />
+          </div>
           </a>
-          <button onclick="prevSlide('project3')" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-l opacity-0 group-hover:opacity-100">&#9664;</button>
-          <button onclick="nextSlide('project3')" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white px-2 py-1 rounded-r opacity-0 group-hover:opacity-100">&#9654;</button>
+          <button class="arrow left-arrow">&#10094;</button>
+          <button class="arrow right-arrow">&#10095;</button>
         </div>
       </div>
+
+      <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <h3 class="text-xl font-bold mb-2 text-white">Obstacle Avoider</h3>
+        <p class="text-gray-300 text-sm mb-4">Ultrasonic sensor-based auto-moving robot.</p>
+        <div class="image-slider relative w-full h-40 rounded overflow-hidden">
+          <a href="demo.html">
+          <div class="slides">
+            <img src="image4-1.jpg" />
+            <img src="image4-2.jpg" />
+            <img src="image4-3.jpg" />
+          </div>
+          </a>
+          <button class="arrow left-arrow">&#10094;</button>
+          <button class="arrow right-arrow">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <h3 class="text-xl font-bold mb-2 text-white">Smart Dustbin</h3>
+        <p class="text-gray-300 text-sm mb-4">Auto-open lid using servo and IR sensors.</p>
+        <div class="image-slider relative w-full h-40 rounded overflow-hidden">
+          <a href="demo.html">
+          <div class="slides">
+            <img src="image5-1.jpg" />
+            <img src="image5-2.jpg" />
+            <img src="image5-3.jpg" />
+          </div>
+          </a>
+          <button class="arrow left-arrow">&#10094;</button>
+          <button class="arrow right-arrow">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <h3 class="text-xl font-bold mb-2 text-white">Bluetooth Automation</h3>
+        <p class="text-gray-300 text-sm mb-4">Control home devices using HC-05 Bluetooth.</p>
+        <div class="image-slider relative w-full h-40 rounded overflow-hidden">
+          <a href="demo.html">
+          <div class="slides">
+            <img src="image6-1.jpg" />
+            <img src="image6-2.jpg" />
+            <img src="image6-3.jpg" />
+          </div>
+          </a>
+          <button class="arrow left-arrow">&#10094;</button>
+          <button class="arrow right-arrow">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <h3 class="text-xl font-bold mb-2 text-white">Smart Atmospheric Water Genarator</h3>
+        <p class="text-gray-300 text-sm mb-4">AI based Atmospheric Water Genarator.</p>
+        <div class="image-slider relative w-full h-40 rounded overflow-hidden">
+          <a href="demo.html">
+          <div class="slides">
+            <img src="image1.jpg" />
+            <img src="image2.jpg" />
+            <img src="image3.jpg" />
+          </div>
+          </a>
+          <button class="arrow left-arrow">&#10094;</button>
+          <button class="arrow right-arrow">&#10095;</button>
+        </div>
+      </div>
+
 
     </div>
   </div>
 </section>
 
-<!-- Slider Script -->
-<script>
-  const projectSlides = {
-    project1: {
-      images: ["image1.jpg", "image2.jpg", "image3.jpg"],
-      index: 0
-    },
-    project2: {
-      images: ["image1.jpg", "image2.jpg", "image3.jpg"],
-      index: 0
-    },
-    project3: {
-      images: ["image1.jpg", "image2.jpg", "image3.jpg"],
-      index: 0
-    }
-  };
-
-  function nextSlide(projectId) {
-    const slide = projectSlides[projectId];
-    slide.index = (slide.index + 1) % slide.images.length;
-    document.getElementById(projectId + "Image").src = slide.images[slide.index];
+<!-- CSS -->
+<style>
+  .project-card .arrow {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
   }
 
-  function prevSlide(projectId) {
-    const slide = projectSlides[projectId];
-    slide.index = (slide.index - 1 + slide.images.length) % slide.images.length;
-    document.getElementById(projectId + "Image").src = slide.images[slide.index];
+  .project-card .left-arrow {
+    left: 0.5rem;
+  }
+
+  .project-card .right-arrow {
+    right: 0.5rem;
+  }
+
+  .slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .image-slider {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+  }
+
+  #projectSlider::-webkit-scrollbar {
+    display: none;
+  }
+  #projectSlider {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+</style>
+
+<!-- JS for Each Card's Image Slider -->
+<script>
+  document.querySelectorAll('.project-card').forEach(card => {
+    const slidesContainer = card.querySelector('.slides');
+    const slides = slidesContainer.children;
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let intervalId;
+
+    const leftArrow = card.querySelector('.left-arrow');
+    const rightArrow = card.querySelector('.right-arrow');
+
+    function updateSlide() {
+      slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    function startAutoSlide() {
+      intervalId = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(intervalId);
+    }
+
+    leftArrow.addEventListener('click', () => {
+      stopAutoSlide();
+      prevSlide();
+      startAutoSlide();
+    });
+
+    rightArrow.addEventListener('click', () => {
+      stopAutoSlide();
+      nextSlide();
+      startAutoSlide();
+    });
+
+    const imageSlider = card.querySelector('.image-slider');
+    imageSlider.addEventListener('mouseenter', () => {
+      leftArrow.style.opacity = '1';
+      rightArrow.style.opacity = '1';
+      stopAutoSlide();
+    });
+    imageSlider.addEventListener('mouseleave', () => {
+      leftArrow.style.opacity = '0';
+      rightArrow.style.opacity = '0';
+      startAutoSlide();
+    });
+
+    updateSlide();
+    startAutoSlide();
+  });
+</script>
+
+<!-- Auto Horizontal Card Scroll + Drag -->
+<script>
+  const slider = document.getElementById("projectSlider");
+  let scrollAmount = 0;
+  const card = slider.querySelector(".project-card");
+  const gap = 24; // Tailwind gap-6 = 1.5rem = 24px
+  const cardWidth = card.offsetWidth + gap;
+  let autoScroll;
+
+  function autoSlide() {
+    scrollAmount += cardWidth;
+    if (scrollAmount > slider.scrollWidth - slider.clientWidth) {
+      scrollAmount = 0;
+    }
+    slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
+  }
+
+  autoScroll = setInterval(autoSlide, 3000);
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  function startDrag(e) {
+    isDown = true;
+    startX = e.pageX || e.touches[0].pageX;
+    scrollLeft = slider.scrollLeft;
+    clearInterval(autoScroll);
+  }
+
+  function endDrag() {
+    isDown = false;
+    autoScroll = setInterval(autoSlide, 3000);
+  }
+
+  function drag(e) {
+    if (!isDown) return;
+    const x = e.pageX || e.touches[0].pageX;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
   }
 </script>
+
+
 
 
 
