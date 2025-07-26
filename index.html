@@ -148,10 +148,10 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
 
       <!-- Project Cards (6 Example Projects) -->
       <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <a href="demo.html">
         <h3 class="text-xl font-bold mb-2 text-white">Smart Power Control</h3>
         <p class="text-gray-300 text-sm mb-4">Arduino-based power management system.</p>
         <div class="image-slider relative w-full h-40 rounded overflow-hidden">
-          <a href="demo.html">
           <div class="slides">
             <img src="image1.jpg" />
             <img src="image2.jpg" />
@@ -164,10 +164,10 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
       </div>
 
       <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <a href="demo.html">
         <h3 class="text-xl font-bold mb-2 text-white">Line Follower Robot</h3>
         <p class="text-gray-300 text-sm mb-4">Follows path using IR sensors & motor driver.</p>
         <div class="image-slider relative w-full h-40 rounded overflow-hidden">
-          <a href="demo.html">
           <div class="slides">
             <img src="image1.jpg" />
             <img src="image2.jpg" />
@@ -180,10 +180,10 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
       </div>
 
       <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <a href="demo.html">
         <h3 class="text-xl font-bold mb-2 text-white">Weather Monitor</h3>
         <p class="text-gray-300 text-sm mb-4">Real-time temperature & humidity IoT device.</p>
         <div class="image-slider relative w-full h-40 rounded overflow-hidden">
-          <a href="demo.html">
           <div class="slides">
             <img src="image1.jpg" />
             <img src="image2.jpg" />
@@ -196,10 +196,10 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
       </div>
 
       <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <a href="demo.html">
         <h3 class="text-xl font-bold mb-2 text-white">Obstacle Avoider</h3>
         <p class="text-gray-300 text-sm mb-4">Ultrasonic sensor-based auto-moving robot.</p>
         <div class="image-slider relative w-full h-40 rounded overflow-hidden">
-          <a href="demo.html">
           <div class="slides">
             <img src="image4-1.jpg" />
             <img src="image4-2.jpg" />
@@ -212,10 +212,10 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
       </div>
 
       <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <a href="demo.html">
         <h3 class="text-xl font-bold mb-2 text-white">Smart Dustbin</h3>
         <p class="text-gray-300 text-sm mb-4">Auto-open lid using servo and IR sensors.</p>
         <div class="image-slider relative w-full h-40 rounded overflow-hidden">
-          <a href="demo.html">
           <div class="slides">
             <img src="image5-1.jpg" />
             <img src="image5-2.jpg" />
@@ -228,10 +228,10 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
       </div>
 
       <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <a href="demo.html">
         <h3 class="text-xl font-bold mb-2 text-white">Bluetooth Automation</h3>
         <p class="text-gray-300 text-sm mb-4">Control home devices using HC-05 Bluetooth.</p>
         <div class="image-slider relative w-full h-40 rounded overflow-hidden">
-          <a href="demo.html">
           <div class="slides">
             <img src="image6-1.jpg" />
             <img src="image6-2.jpg" />
@@ -244,10 +244,10 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
       </div>
 
       <div class="project-card snap-start shrink-0 bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition w-80 relative overflow-hidden">
+        <a href="demo.html">
         <h3 class="text-xl font-bold mb-2 text-white">Smart Atmospheric Water Genarator</h3>
         <p class="text-gray-300 text-sm mb-4">AI based Atmospheric Water Genarator.</p>
         <div class="image-slider relative w-full h-40 rounded overflow-hidden">
-          <a href="demo.html">
           <div class="slides">
             <img src="image1.jpg" />
             <img src="image2.jpg" />
@@ -398,7 +398,7 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
     slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
   }
 
-  autoScroll = setInterval(autoSlide, 3000);
+  autoScroll = setInterval(autoSlide, 6000);
 
   let isDown = false;
   let startX;
@@ -413,7 +413,7 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
 
   function endDrag() {
     isDown = false;
-    autoScroll = setInterval(autoSlide, 3000);
+    autoScroll = setInterval(autoSlide, 6000);
   }
 
   function drag(e) {
@@ -428,22 +428,76 @@ Currently exploring low-level systems, intelligent machines, and problem-solving
 
 
 
-  <!-- Blog Section -->
+<!-- Blog Section -->
 <section id="blog" class="px-6 py-16" data-aos="fade-up">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-3xl font-semibold mb-6 text-center">Blog & Articles</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-2">Learning Linux for Robotics</h3>
-        <p class="text-gray-300 text-sm">Beginner tips on using Linux in embedded robotics.</p>
-      </a>
-      <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-2">My First Arduino Project</h3>
-        <p class="text-gray-300 text-sm">A beginner journey from idea to prototype.</p>
-      </a>
+
+    <!-- Slider Wrapper -->
+    <div class="relative h-[105px] overflow-hidden">
+      <!-- Slide Container (vertical) -->
+      <div id="blogSlider" class="absolute top-0 left-0 w-full transition-transform duration-700 ease-in-out">
+        
+        <!-- Slide 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-2">
+          <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition-transform">
+            <h3 class="text-xl text-white">Learning Linux for Robotics</h3>
+            <p class="text-gray-300">Beginner tips on using Linux in embedded robotics.</p>
+          </a>
+          <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition-transform">
+            <h3 class="text-xl text-white">My First Arduino Project</h3>
+            <p class="text-gray-300">A beginner journey from idea to prototype.</p>
+          </a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-2 mt-6">
+          <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition-transform">
+            <h3 class="text-xl text-white">ESP32 vs Raspberry Pi Pico</h3>
+            <p class="text-gray-300">Which microcontroller is better for AI projects?</p>
+          </a>
+          <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition-transform">
+            <h3 class="text-xl text-white">Debugging C Programs</h3>
+            <p class="text-gray-300">My approach to finding and fixing bugs.</p>
+          </a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-2 mt-6">
+          <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition-transform">
+            <h3 class="text-xl text-white">Using MATLAB in Engineering</h3>
+            <p class="text-gray-300">Basic signal processing with MATLAB.</p>
+          </a>
+          <a href="demo.html" class="bg-gray-700 p-6 rounded-lg block hover:scale-105 transition-transform">
+            <h3 class="text-xl text-white">Why I Love KiCad</h3>
+            <p class="text-gray-300">Open-source PCB design tool for students.</p>
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
+
+<!-- JavaScript: Auto Slide Vertical -->
+<script>
+  const blogSlider = document.getElementById('blogSlider');
+  const slideCount = blogSlider.children.length;
+  let currentIndex = 0;
+
+  const slideInterval = setInterval(() => {
+    currentIndex++;
+    if (currentIndex >= slideCount) currentIndex = 0;
+
+    const singleSlide = blogSlider.children[currentIndex];
+    const offsetTop = singleSlide.offsetTop;
+
+    blogSlider.style.transform = `translateY(-${offsetTop}px)`;
+  }, 3000);
+</script>
+
+
+
 
 
   <!-- Education Timeline -->
